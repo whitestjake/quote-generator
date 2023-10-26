@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=github.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quote-container" id="quote-container">
+        <!-- Quote -->
+        <div class="quote-text">
+            <i class="fa-solid fa-quote-left"></i>
+            <span id="quote"></span>
+            <!-- Anime -->
+            <div class="quote-anime">
+                <span id="anime"></span>
+            </div>
+            <!-- Character -->
+            <div class="quote-character">
+                <span id="character"></span>
+            </div>
+            <!-- Button -->
+            <div class="button-container">
+                <button class="twitter-button" id="twitter" title="Tweet This!">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </button>
+                <button id="new-quote">New Quote</button>
+            </div>
+        </div>
+    </div>
+    <!-- Loader -->
+    <div class="loader" id="loader"></div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
