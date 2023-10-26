@@ -48,7 +48,7 @@ function newQuote() {
 
 }
 
-// Get Quotes from an API
+// Get Quote from an API
 async function getQuotes() {
     loading();
     const apiURL = 'https://animechan.xyz/api/random';
