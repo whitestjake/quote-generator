@@ -11,21 +11,19 @@ const loader = document.getElementById('loader');
 
 let apiQuotes = [];
 
-// Show Loading
-function loading() {
+function showLoadingSpinner() {
     loader.hidden = false;
     quoteContainer.hidden = true;
 }
 
-// Hide Loading
-function complete() {
+function removeLoadingSpinner() {
     quoteContainer.hidden = false;
     loader.hidden = true;
 }
 
 // Show Quote
 function newQuote() {
-    loading();
+    showLoadingSpinner();
     // Picks quote from animechan api
     const quote = apiQuotes;
 
@@ -41,16 +39,16 @@ function newQuote() {
     } else {
         quoteText.classList.remove('long-quote')
     }
-    // Set Quote, Hide Loader
+
     quoteText.textContent = quote.quote;
     quoteCharacter.textContent = quote.character;
-    complete();
+    removeLoadingSpinner();
 
 }
 
 // Get Quote from an API
 async function getQuotes() {
-    loading();
+    showLoadingSpinner();
     const apiURL = 'https://animechan.xyz/api/random';
     try {
         const response = await fetch(apiURL);
